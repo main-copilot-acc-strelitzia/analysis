@@ -1,0 +1,22 @@
+"""
+MT5 Account & Symbol Detector - Requirements
+
+This file specifies all Python packages needed for the application.
+"""
+
+# Core MT5 Integration
+MetaTrader5>=5.0.0
+
+# System utilities (optional but recommended)
+psutil>=5.9.0  # For cross-platform process detection (Windows)
+
+# Cross-platform compatibility
+python-dateutil>=2.8.0  # For date/time handling
+
+# Optional: For Windows-specific functionality
+pywin32>=300 ; sys_platform == 'win32'  # For Windows GUI detection
+
+# Development dependencies (optional)
+# pytest>=7.0.0  # For testing
+# black>=22.0.0  # For code formatting
+# flake8>=4.0.0  # For linting
