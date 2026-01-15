@@ -1,0 +1,647 @@
+2026-01-02 10:02:49 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:02:53 - StrelitziaTrader - ERROR - [31mError retrieving account info: 'AccountInfo' object has no attribute 'stop_out_mode'[0m
+2026-01-02 10:02:53 - StrelitziaTrader - ERROR - [31mLost connection to account information[0m
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:02:53 - StrelitziaTrader - WARNING - [33mInvalid state transition: initializing -> shutting_down[0m
+2026-01-02 10:02:53 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - State transition: initializing -> shutdown
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:02:53 - StrelitziaTrader - WARNING - [33mInvalid state transition: shutdown -> shutting_down[0m
+2026-01-02 10:02:53 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:02:53 - StrelitziaTrader - WARNING - [33mInvalid state transition: shutdown -> shutdown[0m
+2026-01-02 10:02:53 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:11:09 - StrelitziaTrader - ERROR - [31mError retrieving account info: 'AccountInfo' object has no attribute 'stop_out_mode'[0m
+2026-01-02 10:11:09 - StrelitziaTrader - ERROR - [31mLost connection to account information[0m
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:11:09 - StrelitziaTrader - WARNING - [33mInvalid state transition: initializing -> shutting_down[0m
+2026-01-02 10:11:09 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - State transition: initializing -> shutdown
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:11:09 - StrelitziaTrader - WARNING - [33mInvalid state transition: shutdown -> shutting_down[0m
+2026-01-02 10:11:09 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:11:09 - StrelitziaTrader - WARNING - [33mInvalid state transition: shutdown -> shutdown[0m
+2026-01-02 10:11:09 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:15:08 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:15:08 - StrelitziaTrader - WARNING - [33mUnable to retrieve account information[0m
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:15:57 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:16:18 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:16:19 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['M15']
+2026-01-02 10:16:20 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD M15
+2026-01-02 10:16:21 - StrelitziaTrader - ERROR - [31mError in Forex analysis: operands could not be broadcast together with shapes (5,) (4,) [0m
+2026-01-02 10:16:21 - StrelitziaTrader - INFO - Analysis complete for EURUSD M15 - Confluence: 0.00
+2026-01-02 10:16:43 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:16:43 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:16:43 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:16:43 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:16:43 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:16:56 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:18:03 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Other
+2026-01-02 10:18:07 - StrelitziaTrader - INFO - Available timeframes for US100.cash: ['H1']
+2026-01-02 10:18:07 - StrelitziaTrader - DEBUG - Retrieved 500 candles for US100.cash H1
+2026-01-02 10:18:08 - StrelitziaTrader - ERROR - [31mError in general asset analysis: type object 'TrendAnalysis' has no attribute 'trend_strength_confirmation'[0m
+2026-01-02 10:18:08 - StrelitziaTrader - INFO - Analysis complete for US100.cash H1 - Confluence: 0.00
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:21:25 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:21:40 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:21:43 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['H1']
+2026-01-02 10:21:43 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD H1
+2026-01-02 10:21:44 - StrelitziaTrader - ERROR - [31mError analyzing EURUSD H1: 'Logger' object has no attribute 'exception'[0m
+2026-01-02 10:21:55 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:21:55 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:22:37 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:22:37 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['H1', 'D1']
+2026-01-02 10:22:37 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD H1
+2026-01-02 10:22:37 - StrelitziaTrader - ERROR - [31mError analyzing EURUSD H1: 'Logger' object has no attribute 'exception'[0m
+2026-01-02 10:22:37 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD D1
+2026-01-02 10:22:37 - StrelitziaTrader - ERROR - [31mError analyzing EURUSD D1: 'Logger' object has no attribute 'exception'[0m
+2026-01-02 10:22:48 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:22:48 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:23:31 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:23:31 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['M1']
+2026-01-02 10:23:31 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD M1
+2026-01-02 10:23:31 - StrelitziaTrader - ERROR - [31mError analyzing EURUSD M1: 'Logger' object has no attribute 'exception'[0m
+2026-01-02 10:23:42 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:23:42 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:23:42 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:23:42 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:23:42 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:24:14 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:24:54 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:24:55 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['H4']
+2026-01-02 10:24:55 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD H4
+2026-01-02 10:24:55 - StrelitziaTrader - ERROR - [31mError in Forex analysis: operands could not be broadcast together with shapes (5,) (4,) [0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\analysis\forex\analyzer.py", line 123, in analyze
+    signals['session_open'] = SessionAnalysis.session_open_analysis(data)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\ahmm\strelitzia-server\mt5\trader\analysis\forex\sessions.py", line 136, in session_open_analysis
+    gaps = np.abs(opens - np.roll(closes, 1)[1:])
+                  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (5,) (4,) 
+2026-01-02 10:24:55 - StrelitziaTrader - INFO - Analysis complete for EURUSD H4 - Confluence: 0.00
+2026-01-02 10:25:27 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:25:27 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:25:27 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:25:27 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:25:27 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:26:20 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:26:21 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:29:49 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:30:04 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:30:04 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['H4']
+2026-01-02 10:30:04 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD H4
+2026-01-02 10:30:06 - StrelitziaTrader - ERROR - [31mError in Forex analysis: the resolved dtypes are not compatible with add.reduce. Resolved (dtype('<U32'), dtype('<U32'), dtype('<U64'))[0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\analysis\forex\analyzer.py", line 165, in analyze
+    {'current': np.mean(list(signals.values()))}
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\html.config\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\fromnumeric.py", line 3824, in mean
+    return _methods._mean(a, axis=axis, dtype=dtype,
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          out=out, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\html.config\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\_methods.py", line 132, in _mean
+    ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+TypeError: the resolved dtypes are not compatible with add.reduce. Resolved (dtype('<U32'), dtype('<U32'), dtype('<U64'))
+2026-01-02 10:30:06 - StrelitziaTrader - INFO - Analysis complete for EURUSD H4 - Confluence: 0.00
+2026-01-02 10:33:01 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:33:01 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:33:01 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:33:01 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:33:01 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:33:22 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:33:22 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:33:22 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:33:22 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:33:22 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:33:32 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:33:40 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:33:40 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:33:40 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:33:40 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:33:40 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:34:14 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:34:26 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:34:26 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:34:26 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:34:26 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:34:26 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:34:31 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:35:14 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:35:45 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:36:06 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['M30']
+2026-01-02 10:36:10 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD M30
+2026-01-02 10:36:13 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-02 10:36:13 - StrelitziaTrader - ERROR - [31mError in Forex analysis: ufunc 'add' did not contain a loop with signature matching types (dtype('float64'), dtype('<U13')) -> None[0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\analysis\forex\analyzer.py", line 230, in analyze
+    confluence_score = ConfluenceAnalysis.calculate_confluence_score(signals)
+  File "D:\ahmm\strelitzia-server\mt5\trader\analysis\forex\confluence.py", line 29, in calculate_confluence_score
+    return float(np.mean(values))
+                 ~~~~~~~^^^^^^^^
+  File "C:\Users\html.config\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\fromnumeric.py", line 3824, in mean
+    return _methods._mean(a, axis=axis, dtype=dtype,
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          out=out, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\html.config\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\_methods.py", line 132, in _mean
+    ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('float64'), dtype('<U13')) -> None
+2026-01-02 10:36:13 - StrelitziaTrader - INFO - Analysis complete for EURUSD M30 - Confluence: 0.00
+2026-01-02 10:36:23 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:36:23 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:36:23 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:36:23 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:36:23 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:40:18 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:40:50 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:40:50 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['M30']
+2026-01-02 10:40:51 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD M30
+2026-01-02 10:40:52 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-02 10:40:52 - StrelitziaTrader - INFO - Analysis complete for EURUSD M30 - Confluence: 47.64
+2026-01-02 10:42:11 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:42:11 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:42:11 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:42:11 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:42:11 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:42:27 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:43:00 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Forex Majors
+2026-01-02 10:43:00 - StrelitziaTrader - INFO - Available timeframes for EURUSD: ['M1']
+2026-01-02 10:43:01 - StrelitziaTrader - DEBUG - Retrieved 500 candles for EURUSD M1
+2026-01-02 10:43:02 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-02 10:43:02 - StrelitziaTrader - INFO - Analysis complete for EURUSD M1 - Confluence: 52.66
+2026-01-02 10:43:17 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:43:17 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:43:29 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Crypto
+2026-01-02 10:43:33 - StrelitziaTrader - INFO - Available timeframes for BTCUSD: ['H1']
+2026-01-02 10:43:33 - StrelitziaTrader - DEBUG - Retrieved 500 candles for BTCUSD H1
+2026-01-02 10:43:33 - StrelitziaTrader - ERROR - [31mError in general asset analysis: type object 'TrendAnalysis' has no attribute 'trend_strength_confirmation'[0m
+2026-01-02 10:43:33 - StrelitziaTrader - INFO - Analysis complete for BTCUSD H1 - Confluence: 0.00
+2026-01-02 10:49:50 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 10:49:50 - StrelitziaTrader - INFO - Trading blocker initialized - analysis-only mode enforced
+2026-01-02 10:52:53 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 10:52:53 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 10:53:03 - StrelitziaTrader - INFO - Starting analysis for 1 symbols in Crypto
+2026-01-02 10:53:03 - StrelitziaTrader - INFO - Available timeframes for BTCUSD: ['H1']
+2026-01-02 10:53:03 - StrelitziaTrader - DEBUG - Retrieved 500 candles for BTCUSD H1
+2026-01-02 10:53:03 - StrelitziaTrader - ERROR - [31mError in general asset analysis: type object 'TrendAnalysis' has no attribute 'trend_strength_confirmation'[0m
+2026-01-02 10:53:03 - StrelitziaTrader - INFO - Analysis complete for BTCUSD H1 - Confluence: 0.00
+2026-01-02 10:54:14 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 10:54:14 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 10:54:14 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 10:54:14 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 10:54:14 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-02 11:18:53 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - Initializing Strelitzia Trader analysis engine
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - Session established: Account 1521005964 @ FTMO-Demo2
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - State transition: initializing -> running
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - Application initialized successfully
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - Retrieved 131 symbols from MT5
+2026-01-02 11:18:54 - StrelitziaTrader - INFO - Categorized 131 symbols into 6 categories
+2026-01-02 11:25:16 - StrelitziaTrader - INFO - Shutting down Strelitzia Trader
+2026-01-02 11:25:16 - StrelitziaTrader - INFO - State transition: running -> shutting_down
+2026-01-02 11:25:16 - StrelitziaTrader - DEBUG - Cleared all data cache
+2026-01-02 11:25:16 - StrelitziaTrader - INFO - State transition: shutting_down -> shutdown
+2026-01-02 11:25:16 - StrelitziaTrader - INFO - Application shutdown complete
+2026-01-06 12:57:58 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 13:07:30 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 13:08:31 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 13:08:38 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 13:08:39 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 13:08:40 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:08:40 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:08:40 - StrelitziaTrader - ERROR - [31mFailed to broadcast update[0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\ui\webapp.py", line 82, in _cb
+    asyncio.run(ws_mgr.broadcast({'type': 'analysis_update', 'result': result}))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 191, in run
+    raise RuntimeError(
+        "asyncio.run() cannot be called from a running event loop")
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2026-01-06 13:09:10 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 13:09:11 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:09:11 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:09:11 - StrelitziaTrader - ERROR - [31mFailed to broadcast update[0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\ui\webapp.py", line 82, in _cb
+    asyncio.run(ws_mgr.broadcast({'type': 'analysis_update', 'result': result}))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 191, in run
+    raise RuntimeError(
+        "asyncio.run() cannot be called from a running event loop")
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2026-01-06 13:09:41 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 13:09:41 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:09:41 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:09:41 - StrelitziaTrader - ERROR - [31mFailed to broadcast update[0m
+Traceback (most recent call last):
+  File "D:\ahmm\strelitzia-server\mt5\trader\ui\webapp.py", line 82, in _cb
+    asyncio.run(ws_mgr.broadcast({'type': 'analysis_update', 'result': result}))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 191, in run
+    raise RuntimeError(
+        "asyncio.run() cannot be called from a running event loop")
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2026-01-06 13:44:18 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 13:44:20 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 13:46:31 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 13:46:31 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 13:47:10 - StrelitziaTrader - INFO - Started analysis engine for USDJPY M15
+2026-01-06 13:47:10 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 13:47:15 - StrelitziaTrader - DEBUG - Retrieved 739 candles for USDJPY M15
+2026-01-06 13:47:16 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:16 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:28 - StrelitziaTrader - DEBUG - Retrieved 100 candles for USDJPY M15
+2026-01-06 13:47:28 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:28 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:38 - StrelitziaTrader - DEBUG - Retrieved 100 candles for USDJPY M15
+2026-01-06 13:47:38 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:38 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:48 - StrelitziaTrader - DEBUG - Retrieved 100 candles for USDJPY M15
+2026-01-06 13:47:48 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:48 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:59 - StrelitziaTrader - DEBUG - Retrieved 100 candles for USDJPY M15
+2026-01-06 13:47:59 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:47:59 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:48:09 - StrelitziaTrader - DEBUG - Retrieved 100 candles for USDJPY M15
+2026-01-06 13:48:09 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:48:09 - StrelitziaTrader - ERROR - [31mError in structure analysis: 'high'[0m
+2026-01-06 13:48:17 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 13:48:17 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 14:09:04 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 14:24:55 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 14:25:00 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 14:25:49 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:25:49 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:25:56 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 14:25:56 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 14:26:00 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 14:26:32 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:27:02 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:27:33 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:28:03 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:28:33 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:29:03 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:29:34 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:30:04 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:30:34 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:31:04 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:31:35 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:32:05 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:32:35 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:32:44 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:32:44 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:33:06 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:33:36 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:34:06 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:34:37 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:35:07 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:35:37 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:36:08 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:36:38 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:37:08 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:37:38 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:38:09 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:38:39 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:39:09 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:42:45 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 14:42:49 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 14:45:32 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:45:32 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:45:33 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 14:45:59 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 14:45:59 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 14:45:59 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 14:46:30 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:47:00 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:47:30 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:48:01 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:48:31 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:49:01 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:49:31 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:50:02 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:50:32 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 14:53:55 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 14:53:56 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 14:59:08 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:08 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:09 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 14:59:57 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:57 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:57 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 14:59:58 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:58 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 14:59:58 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 15:00:26 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 15:00:26 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 15:00:27 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 15:00:43 - StrelitziaTrader - INFO - Analysis engine event loop stopped, exiting thread
+2026-01-06 15:00:43 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 15:00:43 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 15:35:34 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 15:35:34 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 15:48:53 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 15:48:54 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 15:51:29 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 15:51:29 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 15:51:31 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 15:52:04 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 15:52:04 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 15:53:16 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 15:53:16 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 15:53:18 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 15:53:24 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 15:53:24 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 15:53:24 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 15:53:55 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 15:54:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 15:54:49 - StrelitziaTrader - INFO - Analysis engine event loop stopped, exiting thread
+2026-01-06 15:54:49 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 15:54:49 - StrelitziaTrader - INFO - Stopped analysis engine
+2026-01-06 16:00:10 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 16:00:10 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 16:00:10 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 16:01:14 - StrelitziaTrader - INFO - Started analysis engine for EURUSD M15
+2026-01-06 16:01:14 - StrelitziaTrader - INFO - Analysis engine already running
+2026-01-06 16:01:14 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:01:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:02:15 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:02:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:03:15 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:03:46 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:04:16 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:04:47 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:05:17 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:05:48 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:06:18 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:06:49 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:07:19 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:07:49 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:08:20 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:08:50 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:09:20 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:09:51 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:10:21 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:10:52 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:11:25 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:11:56 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:12:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:12:56 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:13:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:13:57 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:14:27 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:14:58 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:15:28 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:15:58 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:16:29 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:16:59 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:17:30 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:18:00 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:18:31 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:19:01 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:19:32 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:20:02 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:20:32 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:21:03 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:21:33 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:22:03 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:22:34 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:23:04 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:23:34 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:24:05 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:24:35 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:25:05 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:25:36 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:26:06 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:26:36 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:27:07 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:27:37 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:28:07 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:28:38 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:29:08 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:29:39 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:30:09 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:30:40 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:31:11 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:31:41 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:32:11 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:32:42 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:33:12 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:33:42 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:34:13 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:34:44 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:35:14 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:35:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:36:15 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:36:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:37:16 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:37:46 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:38:16 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:38:47 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:39:17 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:39:48 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:40:18 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:40:48 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:41:19 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:41:49 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:42:19 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:42:49 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:43:20 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:43:50 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:44:20 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:44:50 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:45:21 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:45:51 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:46:21 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:46:52 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:47:22 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:47:52 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:48:23 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:48:53 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:49:23 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:49:53 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:50:24 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:50:54 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:51:24 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:51:54 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:52:25 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:52:55 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:53:25 - StrelitziaTrader - DEBUG - Retrieved 739 candles for EURUSD M15
+2026-01-06 16:53:56 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:54:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:54:56 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:55:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:55:57 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:56:27 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:56:58 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:57:28 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:57:58 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:58:29 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:58:59 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:59:29 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 16:59:59 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:00:30 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:01:00 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:01:30 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:02:01 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:02:31 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:03:01 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:03:31 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:04:02 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:04:32 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:05:03 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:05:39 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:06:09 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:06:40 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:07:10 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:07:40 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:08:11 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:08:41 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:09:12 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:09:43 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:10:13 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:10:43 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:11:14 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:11:36 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 17:11:36 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 17:11:38 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 17:11:44 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:12:17 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:12:47 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:13:18 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:13:48 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:14:18 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:14:49 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:15:19 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:15:50 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:16:26 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:16:56 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:17:27 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:17:57 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:18:28 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:18:57 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:19:27 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:20:11 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:20:41 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:21:11 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:21:42 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:22:13 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:22:44 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:23:14 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:23:44 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:24:14 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:24:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:25:15 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:25:45 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:26:16 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:26:46 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:27:16 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:27:46 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:28:17 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 17:28:47 - StrelitziaTrader - DEBUG - Retrieved 100 candles for EURUSD M15
+2026-01-06 18:03:18 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 18:03:27 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 18:13:44 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 18:13:45 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-06 18:14:25 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 18:14:25 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-06 18:14:27 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-06 18:56:58 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-06 18:57:00 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 08:39:56 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-07 08:40:02 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 10:29:53 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-07 10:30:27 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 10:48:45 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-07 10:48:46 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 19:55:14 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-07 19:55:17 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 19:57:28 - StrelitziaTrader - INFO - Login attempt: username="leblanc" password="the pale woman" (len=14)
+2026-01-07 19:57:28 - StrelitziaTrader - INFO - Login successful for user: leblanc
+2026-01-07 21:31:25 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-07 21:31:30 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-07 22:12:10 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-07 22:13:21 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-07 22:14:28 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-07 22:15:34 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-07 22:21:50 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-07 22:23:03 - StrelitziaTrader - ERROR - [31mFailed to initialize MT5: (-10005, 'IPC timeout')[0m
+2026-01-08 00:06:38 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-08 00:06:43 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-08 00:14:04 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-08 00:14:04 - StrelitziaTrader - INFO - Successfully connected to MT5 terminal
+2026-01-08 00:14:07 - StrelitziaTrader - DEBUG - Retrieved 200 candles for EURUSD M15
+2026-01-08 14:49:19 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-08 14:49:23 - StrelitziaTrader - DEBUG - Captured main asyncio loop for cross-thread scheduling
+2026-01-12 18:44:22 - StrelitziaTrader - INFO - Logging verbosity set to STANDARD
+2026-01-12 18:46:20 - StrelitziaTrader - CRITICAL - [41mMT5 not available[0m
+2026-01-12 18:46:21 - StrelitziaTrader - CRITICAL - [41mStartup verification failed[0m
