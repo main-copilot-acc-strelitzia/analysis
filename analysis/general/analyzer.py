@@ -98,7 +98,7 @@ class GeneralAssetAnalyzer(BaseAnalyzer):
                 signals['volume_trend'] = VolumeAnalysis.volume_trend(data)
                 signals['volatility_level'] = VolatilityAnalysis.volatility_expansion(data)
                 signals['support_resistance'] = SupportResistanceAnalysis.support_resistance_levels(data)
-                signals['trend_strength'] = TrendAnalysis.trend_strength_confirmation(data)
+                signals['trend_strength'] = getattr(TrendAnalysis, 'trend_strength_confirmation', TrendAnalysis.adx_trend_strength)(data)
                 signals['macd_momentum'] = MomentumAnalysis.macd_signal(data)
                 signals['breakout_detection'] = self._detect_breakout(data)
                 signals['stochastic_momentum'] = MomentumAnalysis.stochastic_momentum(data)
@@ -116,7 +116,7 @@ class GeneralAssetAnalyzer(BaseAnalyzer):
 
                 # Trend Analysis (6 methods)
                 signals['ma_trend'] = TrendAnalysis.moving_average_crossover(data)
-                signals['trend_strength'] = TrendAnalysis.trend_strength_confirmation(data)
+                signals['trend_strength'] = getattr(TrendAnalysis, 'trend_strength_confirmation', TrendAnalysis.adx_trend_strength)(data)
                 signals['trend_direction'] = TrendAnalysis.trend_direction_detection(data)
                 signals['adx_trend'] = MomentumAnalysis.adx_momentum(data)
                 signals['rsi_trend'] = MomentumAnalysis.rsi_momentum(data)
@@ -164,7 +164,7 @@ class GeneralAssetAnalyzer(BaseAnalyzer):
 
                 # Trend Analysis (6 methods)
                 signals['ma_trend'] = TrendAnalysis.moving_average_crossover(data)
-                signals['trend_strength'] = TrendAnalysis.trend_strength_confirmation(data)
+                signals['trend_strength'] = getattr(TrendAnalysis, 'trend_strength_confirmation', TrendAnalysis.adx_trend_strength)(data)
                 signals['trend_direction'] = TrendAnalysis.trend_direction_detection(data)
                 signals['adx_trend'] = MomentumAnalysis.adx_momentum(data)
                 signals['rsi_trend'] = MomentumAnalysis.rsi_momentum(data)

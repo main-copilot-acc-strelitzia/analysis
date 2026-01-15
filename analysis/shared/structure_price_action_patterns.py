@@ -106,7 +106,31 @@ class StructurePriceActionAnalyzer:
             - 'key_structures': Most significant patterns found
         """
         try:
-            if len(data) < self.min_lookback:
+            # Normalize column names to a consistent lowercase set used throughout
+            # the module. Upstream data sources (MT5) use TitleCase column names
+            # like 'High'/'Low'/'Close' while this analyzer expects 'high'/'low'/'close'.
+            if isinstance(data, pd.DataFrame):
+                df = data.copy()
+                colmap = {}
+                # map common TitleCase -> lowercase keys
+                if 'High' in df.columns and 'high' not in df.columns:
+                    colmap['High'] = 'high'
+                if 'Low' in df.columns and 'low' not in df.columns:
+                    colmap['Low'] = 'low'
+                if 'Close' in df.columns and 'close' not in df.columns:
+                    colmap['Close'] = 'close'
+                if 'Open' in df.columns and 'open' not in df.columns:
+                    colmap['Open'] = 'open'
+                if 'Volume' in df.columns and 'volume' not in df.columns:
+                    colmap['Volume'] = 'volume'
+                if 'Timestamp' in df.columns and 'timestamp' not in df.columns:
+                    colmap['Timestamp'] = 'timestamp'
+                if colmap:
+                    df = df.rename(columns=colmap)
+            else:
+                df = data
+
+            if len(df) < self.min_lookback:
                 return {
                     'patterns': [],
                     'pattern_families': {},
@@ -122,40 +146,40 @@ class StructurePriceActionAnalyzer:
             patterns = []
 
             # Trend Structures (30+ patterns)
-            patterns.extend(self._detect_uptrend_structures(data))
-            patterns.extend(self._detect_downtrend_structures(data))
-            patterns.extend(self._detect_sideways_structures(data))
+            patterns.extend(self._detect_uptrend_structures(df))
+            patterns.extend(self._detect_downtrend_structures(df))
+            patterns.extend(self._detect_sideways_structures(df))
 
             # Support & Resistance Structures (40+ patterns)
-            patterns.extend(self._detect_horizontal_sr(data))
-            patterns.extend(self._detect_dynamic_sr(data))
-            patterns.extend(self._detect_role_reversals(data))
+            patterns.extend(self._detect_horizontal_sr(df))
+            patterns.extend(self._detect_dynamic_sr(df))
+            patterns.extend(self._detect_role_reversals(df))
 
             # Chart Formations (50+ patterns)
-            patterns.extend(self._detect_reversal_formations(data))
-            patterns.extend(self._detect_head_shoulders_variations(data))
-            patterns.extend(self._detect_handle_formations(data))
+            patterns.extend(self._detect_reversal_formations(df))
+            patterns.extend(self._detect_head_shoulders_variations(df))
+            patterns.extend(self._detect_handle_formations(df))
 
             # Continuation Structures (35+ patterns)
-            patterns.extend(self._detect_flag_structures(data))
-            patterns.extend(self._detect_pennant_structures(data))
-            patterns.extend(self._detect_rectangle_structures(data))
-            patterns.extend(self._detect_consolidation_structures(data))
+            patterns.extend(self._detect_flag_structures(df))
+            patterns.extend(self._detect_pennant_structures(df))
+            patterns.extend(self._detect_rectangle_structures(df))
+            patterns.extend(self._detect_consolidation_structures(df))
 
             # Wedge & Triangle Structures (30+ patterns)
-            patterns.extend(self._detect_wedge_structures(data))
-            patterns.extend(self._detect_triangle_structures(data))
+            patterns.extend(self._detect_wedge_structures(df))
+            patterns.extend(self._detect_triangle_structures(df))
 
             # Breakout & Failure Patterns (25+ patterns)
-            patterns.extend(self._detect_breakout_patterns(data))
-            patterns.extend(self._detect_failure_patterns(data))
+            patterns.extend(self._detect_breakout_patterns(df))
+            patterns.extend(self._detect_failure_patterns(df))
 
             # Market Behavior Patterns (30+ patterns)
-            patterns.extend(self._detect_accumulation_distribution(data))
-            patterns.extend(self._detect_mean_reversion(data))
+            patterns.extend(self._detect_accumulation_distribution(df))
+            patterns.extend(self._detect_mean_reversion(df))
 
             # Time-Based Structures (20+ patterns)
-            patterns.extend(self._detect_session_structures(data))
+            patterns.extend(self._detect_session_structures(df))
 
             # Calculate aggregate metrics
             bullish = [p for p in patterns if p['pattern_type'] == 'Bullish']
@@ -164,10 +188,10 @@ class StructurePriceActionAnalyzer:
             avg_confidence = np.mean([p['confidence'] for p in patterns]) if patterns else 0.0
             
             # Determine trend direction
-            trend_dir = self._determine_trend_direction(data, patterns)
+            trend_dir = self._determine_trend_direction(df, patterns)
             
             # Market context
-            market_ctx = self._determine_market_context(data, patterns)
+            market_ctx = self._determine_market_context(df, patterns)
             
             # Structure score
             structure_score = self._calculate_structure_score(patterns, bullish, bearish)

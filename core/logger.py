@@ -120,6 +120,10 @@ class Logger:
         """Log error message."""
         self._logger.error(message, *args)
 
+    def exception(self, message: str, *args):
+        """Log an exception with traceback."""
+        self._logger.exception(message, *args)
+
     def critical(self, message: str, *args):
         """Log critical message."""
         self._logger.critical(message, *args)

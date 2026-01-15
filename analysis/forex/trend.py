@@ -211,3 +211,11 @@ class TrendAnalysis:
             return 35.0
         else:
             return 50.0
+
+    @staticmethod
+    def trend_strength_confirmation(data: pd.DataFrame) -> float:
+        """Compatibility shim: historical name used by general analyzer.
+
+        Delegate to `adx_trend_strength` for a simple trend strength estimate.
+        """
+        return TrendAnalysis.adx_trend_strength(data)

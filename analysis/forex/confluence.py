@@ -7,6 +7,17 @@ class ConfluenceAnalysis:
     """Analyzes confluence of multiple signals."""
 
     @staticmethod
+    def _numeric_list(values):
+        """Return list of numeric values coercible to float from an iterable."""
+        nums = []
+        for v in values:
+            try:
+                nums.append(float(v))
+            except Exception:
+                continue
+        return nums
+
+    @staticmethod
     def calculate_confluence_score(signals: dict) -> float:
         """
         Calculate overall confluence score from multiple signals.
@@ -20,12 +31,12 @@ class ConfluenceAnalysis:
         if not signals:
             return 50.0
 
-        values = list(signals.values())
+        values = ConfluenceAnalysis._numeric_list(signals.values())
 
         if len(values) == 0:
             return 50.0
 
-        # Average of all signals
+        # Average of numeric signals only
         return float(np.mean(values))
 
     @staticmethod
@@ -46,9 +57,14 @@ class ConfluenceAnalysis:
         total_weight = sum(weights.values())
         if total_weight == 0:
             return 50.0
-
-        weighted_sum = sum(signals.get(k, 50) * weights.get(k, 0) 
-                          for k in signals.keys())
+        weighted_sum = 0.0
+        for k in signals.keys():
+            sig_val = signals.get(k, 50)
+            try:
+                sig = float(sig_val)
+            except Exception:
+                sig = 50.0
+            weighted_sum += sig * weights.get(k, 0)
 
         return weighted_sum / total_weight
 
@@ -62,10 +78,12 @@ class ConfluenceAnalysis:
         if len(signals) < 2:
             return 50.0
 
-        values = list(signals.values())
+        values = ConfluenceAnalysis._numeric_list(signals.values())
 
-        # Calculate standard deviation of signals
-        std_dev = np.std(values)
+        # Calculate standard deviation of numeric signals
+        if len(values) == 0:
+            return 50.0
+        std_dev = float(np.std(values))
 
         # Low std = high agreement
         if std_dev < 10:
@@ -91,7 +109,14 @@ class ConfluenceAnalysis:
         Returns:
             Count of bullish signals.
         """
-        return sum(1 for v in signals.values() if v >= threshold)
+        count = 0
+        for v in signals.values():
+            try:
+                if float(v) >= threshold:
+                    count += 1
+            except Exception:
+                continue
+        return count
 
     @staticmethod
     def bearish_confluence_count(signals: dict, threshold: float = 40) -> int:
@@ -105,7 +130,14 @@ class ConfluenceAnalysis:
         Returns:
             Count of bearish signals.
         """
-        return sum(1 for v in signals.values() if v <= threshold)
+        count = 0
+        for v in signals.values():
+            try:
+                if float(v) <= threshold:
+                    count += 1
+            except Exception:
+                continue
+        return count
 
     @staticmethod
     def neutral_confluence_count(signals: dict, lower: float = 40, upper: float = 60) -> int:
@@ -120,7 +152,15 @@ class ConfluenceAnalysis:
         Returns:
             Count of neutral signals.
         """
-        return sum(1 for v in signals.values() if lower < v < upper)
+        count = 0
+        for v in signals.values():
+            try:
+                fv = float(v)
+            except Exception:
+                continue
+            if lower < fv < upper:
+                count += 1
+        return count
 
     @staticmethod
     def confluence_strength_rating(confluence_score: float) -> str:
@@ -155,7 +195,8 @@ class ConfluenceAnalysis:
             return 50.0
 
         agreement = ConfluenceAnalysis.signal_agreement_level(signals)
-        mean_signal = np.mean(list(signals.values()))
+        numeric_vals = ConfluenceAnalysis._numeric_list(signals.values())
+        mean_signal = float(np.mean(numeric_vals)) if numeric_vals else 50.0
 
         # Quality = agreement + strength
         strength = max(abs(mean_signal - 50), 0) / 50 * 100

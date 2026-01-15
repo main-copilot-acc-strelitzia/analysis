@@ -271,3 +271,66 @@ class StatisticalTools:
         if c0 == 0:
             return 0.0
         return c / c0
+
+
+class StatisticalAnalysis:
+    """Compatibility shim providing higher-level statistical analyses used by analyzers.
+
+    This wraps lower-level utilities in `StatisticalTools` so older imports keep working.
+    """
+
+    @staticmethod
+    def correlation_with_market(data) -> dict:
+        """Return simple correlation metrics for the provided OHLCV DataFrame-like object."""
+        try:
+            closes = np.asarray(data['Close'].values)
+        except Exception:
+            return {}
+
+        result = {
+            'close_autocorr_lag1': float(StatisticalTools.autocorrelation(closes, 1))
+        }
+
+        if 'Volume' in data.columns:
+            vols = np.asarray(data['Volume'].values)
+            result['close_volume_corr'] = float(StatisticalTools.correlation(closes, vols))
+
+        return result
+
+    @staticmethod
+    def price_distribution_analysis(data) -> dict:
+        """Return basic distribution statistics for the `Close` price series."""
+        try:
+            closes = np.asarray(data['Close'].values, dtype=float)
+        except Exception:
+            return {}
+
+        returns = StatisticalTools.calculate_log_returns(closes)
+        return {
+            'mean_return': float(np.mean(returns)) if len(returns) else 0.0,
+            'std_return': float(np.std(returns)) if len(returns) else 0.0,
+            'skewness': float(StatisticalTools.skewness(returns)) if len(returns) else 0.0,
+            'kurtosis': float(StatisticalTools.kurtosis(returns)) if len(returns) else 0.0,
+            'var_95': float(StatisticalTools.value_at_risk(returns, 0.95)) if len(returns) else 0.0,
+        }
+
+    @staticmethod
+    def anomaly_detection(data, z_thresh: float = 3.0) -> dict:
+        """Detect simple anomalies in `Close` returns using z-score thresholding."""
+        try:
+            closes = np.asarray(data['Close'].values, dtype=float)
+        except Exception:
+            return {'anomalies': []}
+
+        returns = StatisticalTools.calculate_log_returns(closes)
+        if len(returns) == 0:
+            return {'anomalies': []}
+
+        mu = np.mean(returns)
+        sigma = np.std(returns)
+        if sigma == 0:
+            return {'anomalies': []}
+
+        z = (returns - mu) / sigma
+        anomaly_idxs = list(np.where(np.abs(z) >= z_thresh)[0].tolist())
+        return {'anomalies': anomaly_idxs, 'count': len(anomaly_idxs)}
