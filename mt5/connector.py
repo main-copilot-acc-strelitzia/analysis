@@ -184,3 +184,35 @@ class MT5Connector:
         except Exception as e:
             self.logger.error(f"MT5 accessibility check failed: {e}")
             return False
+
+    def get_symbols(self) -> Optional[list]:
+        """
+        Retrieve a list of available symbols from the MT5 terminal.
+
+        Returns a list of dicts: {"name", "path", "visible"}
+        """
+        try:
+            # Ensure mt5 initialized
+            if not self._connected:
+                try:
+                    mt5.initialize()
+                    self._connected = True
+                except Exception:
+                    self.logger.exception("Failed to initialize MT5 for symbol retrieval")
+                    return None
+
+            syms = mt5.symbols_get()
+            out = []
+            if syms is None:
+                return out
+            for s in syms:
+                out.append({
+                    'name': s.name,
+                    'path': getattr(s, 'path', None),
+                    'visible': getattr(s, 'visible', None),
+                })
+            return out
+
+        except Exception as e:
+            self.logger.exception(f"Error retrieving symbols: {e}")
+            return None

@@ -43,8 +43,8 @@ class AccountManager:
                 'limit_orders': account_info.limit_orders,
                 'trade_allowed': account_info.trade_allowed,
                 'trade_expert': account_info.trade_expert,
-                'stop_out_mode': account_info.stop_out_mode,
-                'fifo_close': account_info.fifo_close,
+                'stop_out_mode': getattr(account_info, 'stop_out_mode', None),
+                'fifo_close': getattr(account_info, 'fifo_close', None),
             }
 
         except Exception as e:
