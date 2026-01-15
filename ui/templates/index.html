@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Trading Monitor</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <!-- TradingView Lightweight Charts (fallback to CDN if local unavailable) -->
+  <script>
+    // Load TradingView Lightweight Charts from CDN
+    var script = document.createElement('script');
+    script.src = '/static/js/lightweight-charts.umd.production.min.js';
+    script.onerror = function(){
+      var fallback = document.createElement('script');
+      fallback.src = 'https://unpkg.com/lightweight-charts/index.js';
+      document.head.appendChild(fallback);
+    };
+    document.head.appendChild(script);
+  </script>
+  <script src="/static/js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Strelitzia Trader — Analysis Monitor</h1>
+    <div class="top-actions">
+      <button id="connect" class="btn">Connect MT5</button>
+      <div class="status">Connection: <span id="conn-status" class="badge badge-stopped">not connected</span></div>
+      <div class="status">Engine: <span id="running" class="badge badge-stopped">stopped</span></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel controls">
+      <h2>Controls</h2>
+      <div class="form-row"><label>Symbol</label><select id="symbol"><option>EURUSD</option></select></div>
+      <div class="form-row"><label>Timeframe</label><input id="timeframe" value="M15"/></div>
+      <div class="form-row"><label>History days</label><input id="history" value="7" size="3"/></div>
+      <div class="form-row"><label>Poll sec</label><input id="poll" value="30" size="3"/></div>
+      <div class="form-row buttons">
+        <button id="start" class="btn btn-primary">Start</button>
+        <button id="stop" class="btn">Stop</button>
+      </div>
+      <section class="panel signals-card" id="signals-card">
+        <h3>Signals Summary</h3>
+        <div id="signals" class="card-body"></div>
+      </section>
+    </aside>
+
+    <section class="panel main">
+      <div id="setup_status" class="setup"></div>
+      <div id="chart" class="chart"><canvas id="chart-canvas"></canvas></div>
+    </section>
+  </main>
+
+<script>
+const ws = new WebSocket(`ws://${location.host}/ws`);
+let lastResult = null;
+let chartjsInstance = null;
+const loadedScripts = new Set();
+
+function loadScript(url){
+  return new Promise((resolve, reject) => {
+    if (loadedScripts.has(url)) return resolve();
+    const s = document.createElement('script');
+    s.src = url;
+    s.onload = () => { loadedScripts.add(url); resolve(); };
+    s.onerror = (e) => reject(new Error('failed to load '+url));
+    document.head.appendChild(s);
+  });
+}
+
+ws.onmessage = function(e) {
+  try {
+    const msg = JSON.parse(e.data);
+    if (msg.type === 'analysis_update') {
+      lastResult = msg.result;
+      renderSignals(msg.result);
+      renderChart(msg.result);
+    }
+  } catch (err) {
+    console.error('ws parse', err);
+  }
+};
+
+function renderSignals(res) {
+  const el = document.getElementById('signals');
+  if (!res) return;
+  const cur = res.analysis && res.analysis.current_analysis ? res.analysis.current_analysis : {};
+  const hist = res.analysis && res.analysis.historical_structure_analysis ? res.analysis.historical_structure_analysis : {};
+  el.innerHTML = `<pre>${JSON.stringify({confluence: res.confluence_score, rating: res.rating, current_count: Object.keys(cur).length, history_keys: Object.keys(hist)}, null, 2)}</pre>`;
+  const statusEl = document.getElementById('setup_status');
+  const status = res.setup_status || 'unknown';
+  const dir = res.direction || 'neutral';
+  const reason = res.reasoning || {};
+  let color = '#555';
+  if (status === 'valid') color = 'green';
+  else if (status === 'forming') color = 'orange';
+  else if (status === 'no_setup') color = 'red';
+  statusEl.innerHTML = `<strong>Status:</strong> <span style='color:${color}'>${status.toUpperCase()}</span> — <strong>Bias:</strong> ${dir.toUpperCase()} <br/><pre>${JSON.stringify(reason, null, 2)}</pre>`;
+}
+
+function destroyPlotly(){
+  try{ if (window.Plotly && document.getElementById('chart')) Plotly.purge('chart'); }catch(e){}
+}
+
+function ensureCanvasPresent(){
+  const container = document.getElementById('chart');
+  container.innerHTML = '<canvas id="chart-canvas"></canvas>';
+}
+
+function renderChart(res){
+  const raw = res.raw_candles || (res.analysis && res.analysis.current_analysis && res.analysis.current_analysis.raw_candles);
+  if (!raw || raw.length === 0) return;
+  
+  // Always use Chart.js as primary engine
+  destroyPlotly();
+  ensureCanvasPresent();
+  
+  // Load Chart.js if not already loaded
+  if (!window.Chart){
+    loadScript('/static/js/6mRdyiCx.js');
+    return;
+  }
+  
+  const ctx = document.getElementById('chart-canvas').getContext('2d');
+  const data = raw.map(r => ({t: new Date(r.Timestamp), o: r.Open, h: r.High, l: r.Low, c: r.Close}));
+  
+  if (chartjsInstance){
+    try{ chartjsInstance.destroy(); }catch(e){}
+    chartjsInstance = null;
+  }
+  
+  const ChartLib = window.Chart || window.chart || (typeof Chart !== 'undefined' ? Chart : null);
+  if (!ChartLib){
+    console.error('Chart.js library not available');
+    return;
+  }
+  
+  try{
+    // Render candlestick if available; fallback to line chart
+    const chartType = ChartLib.defaults && ChartLib.defaults.candlestick ? 'candlestick' : 'line';
+    const cfg = {
+      type: chartType,
+      data: {datasets: [{label: 'Candles', data: data}]},
+      options: {scales: {x: {type: 'time', time: {unit: 'minute'}}, y: {}}}
+    };
+    chartjsInstance = new ChartLib(ctx, cfg);
+  }catch(err){
+    console.error('Chart.js render failed', err);
+  }
+}
+
+document.getElementById('start').onclick = async () => {
+  const symbol = document.getElementById('symbol').value;
+  const timeframe = document.getElementById('timeframe').value;
+  const history_days = document.getElementById('history').value;
+  const poll = document.getElementById('poll').value;
+  const r = await fetch('/start', {method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify({symbol, timeframe, history_days, poll_interval: poll})});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+};
+
+document.getElementById('stop').onclick = async () => {
+  const r = await fetch('/stop', {method:'POST'});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+};
+
+document.getElementById('connect').onclick = async () => {
+  const r = await fetch('/connect', {method: 'POST'});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+  if (j.status === 'connected') {
+    const s = await fetch('/symbols');
+    const js = await s.json();
+    const select = document.getElementById('symbol');
+    select.innerHTML = '';
+    (js.symbols || []).forEach(sym => {
+      const opt = document.createElement('option');
+      opt.value = sym.name;
+      opt.textContent = sym.name;
+      select.appendChild(opt);
+    });
+  }
+};
+
+// Auto-load Chart.js file on startup
+window.addEventListener('load', () => {
+  loadScript('/static/js/6mRdyiCx.js');
+});
+</script>
+</body>
+</html>

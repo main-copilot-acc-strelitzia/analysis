@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Trading Monitor - LightningChart</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <!-- LightningChart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@lightningchart/lcjs@4.2.2/dist/index.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Strelitzia Trader — Analysis Monitor (LightningChart)</h1>
+    <div class="top-actions">
+      <button id="connect" class="btn">Connect MT5</button>
+      <div class="status">Connection: <span id="conn-status" class="badge badge-stopped">not connected</span></div>
+      <div class="status">Engine: <span id="running" class="badge badge-stopped">stopped</span></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel controls">
+      <h2>Controls</h2>
+      <div class="form-row"><label>Symbol</label><select id="symbol"><option>EURUSD</option></select></div>
+      <div class="form-row"><label>Timeframe</label><input id="timeframe" value="M15"/></div>
+      <div class="form-row"><label>History days</label><input id="history" value="7" size="3"/></div>
+      <div class="form-row"><label>Poll sec</label><input id="poll" value="30" size="3"/></div>
+      <div class="form-row buttons">
+        <button id="start" class="btn btn-primary">Start</button>
+        <button id="stop" class="btn">Stop</button>
+      </div>
+      <section class="panel signals-card" id="signals-card">
+        <h3>Signals Summary</h3>
+        <div id="signals" class="card-body"></div>
+      </section>
+    </aside>
+
+    <section class="panel main">
+      <div id="setup_status" class="setup"></div>
+      <div id="chart" class="chart"></div>
+    </section>
+  </main>
+
+<script>
+const ws = new WebSocket(`ws://${location.host}/ws`);
+let lastResult = null;
+let lightningChart = null;
+let candlestickSeries = null;
+
+// Wait for LightningChart to load
+function waitForLightningChart() {
+  return new Promise((resolve) => {
+    if (window.lcjs) {
+      resolve();
+    } else {
+      const checkInterval = setInterval(() => {
+        if (window.lcjs) {
+          clearInterval(checkInterval);
+          resolve();
+        }
+      }, 100);
+    }
+  });
+}
+
+ws.onmessage = function(e) {
+  try {
+    const msg = JSON.parse(e.data);
+    if (msg.type === 'analysis_update') {
+      lastResult = msg.result;
+      renderSignals(msg.result);
+      renderChart(msg.result);
+    }
+  } catch (err) {
+    console.error('ws parse', err);
+  }
+};
+
+function renderSignals(res) {
+  const el = document.getElementById('signals');
+  if (!res) return;
+  const cur = res.analysis && res.analysis.current_analysis ? res.analysis.current_analysis : {};
+  const hist = res.analysis && res.analysis.historical_structure_analysis ? res.analysis.historical_structure_analysis : {};
+  el.innerHTML = `<pre>${JSON.stringify({confluence: res.confluence_score, rating: res.rating, current_count: Object.keys(cur).length, history_keys: Object.keys(hist)}, null, 2)}</pre>`;
+  const statusEl = document.getElementById('setup_status');
+  const status = res.setup_status || 'unknown';
+  const dir = res.direction || 'neutral';
+  const reason = res.reasoning || {};
+  let color = '#555';
+  if (status === 'valid') color = 'green';
+  else if (status === 'forming') color = 'orange';
+  else if (status === 'no_setup') color = 'red';
+  statusEl.innerHTML = `<strong>Status:</strong> <span style='color:${color}'>${status.toUpperCase()}</span> — <strong>Bias:</strong> ${dir.toUpperCase()} <br/><pre>${JSON.stringify(reason, null, 2)}</pre>`;
+}
+
+async function renderChart(res){
+  const raw = res.raw_candles || (res.analysis && res.analysis.current_analysis && res.analysis.current_analysis.raw_candles);
+  if (!raw || raw.length === 0) return;
+
+  await waitForLightningChart();
+
+  const lcjs = window.lcjs;
+  const container = document.getElementById('chart');
+  container.innerHTML = '';
+
+  // Create chart
+  const chart = lcjs
+    .lightningChart()
+    .ChartXY({
+      container: 'chart',
+      disableAnimations: true,
+    })
+    .setTitle('Candlestick Chart');
+
+  // Configure axes
+  const axisX = chart.getDefaultAxisX();
+  const axisY = chart.getDefaultAxisY();
+
+  axisX.setTitle('Time');
+  axisY.setTitle('Price');
+
+  // Create candlestick series
+  const candleStickSeries = chart
+    .addCandlestickSeries({ xAxis: axisX, yAxis: axisY })
+    .setTitle('Candles');
+
+  // Transform data format
+  const candleData = raw.map((r, index) => ({
+    position: index,
+    open: r.Open,
+    high: r.High,
+    low: r.Low,
+    close: r.Close,
+  }));
+
+  // Add data to series
+  candleStickSeries.add(candleData);
+
+  // Auto scale chart
+  chart.getDefaultAxisX().fit();
+  chart.getDefaultAxisY().fit();
+
+  lightningChart = chart;
+  candlestickSeries = candleStickSeries;
+}
+
+document.getElementById('start').onclick = async () => {
+  const symbol = document.getElementById('symbol').value;
+  const timeframe = document.getElementById('timeframe').value;
+  const history_days = document.getElementById('history').value;
+  const poll = document.getElementById('poll').value;
+  const r = await fetch('/start', {method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify({symbol, timeframe, history_days, poll_interval: poll})});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+};
+
+document.getElementById('stop').onclick = async () => {
+  const r = await fetch('/stop', {method:'POST'});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+};
+
+document.getElementById('connect').onclick = async () => {
+  const r = await fetch('/connect', {method: 'POST'});
+  const j = await r.json();
+  document.getElementById('running').textContent = j.status;
+  if (j.status === 'connected') {
+    const s = await fetch('/symbols');
+    const js = await s.json();
+    const select = document.getElementById('symbol');
+    select.innerHTML = '';
+    (js.symbols || []).forEach(sym => {
+      const opt = document.createElement('option');
+      opt.value = sym.name;
+      opt.textContent = sym.name;
+      select.appendChild(opt);
+    });
+  }
+};
+</script>
+</body>
+</html>

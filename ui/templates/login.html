@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Login — Strelitzia Trader</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <style>
+    .login-error { color: red; margin: 10px 0; }
+    .login-hint { color: #666; font-size: 0.9em; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <main class="layout">
+    <section class="panel main">
+      <h2>Login</h2>
+      <div id="error-msg" class="login-error" style="display:none;"></div>
+      <form id="login-form" method="post" action="/login">
+        <div class="form-row"><label>Username</label><input id="username" name="username" type="text" autofocus required /></div>
+        <div class="form-row"><label>Password</label><input id="password" name="password" type="password" required /></div>
+        <div class="form-row buttons"><button type="submit" class="btn btn-primary">Sign in</button></div>
+      </form>
+      <div class="login-hint">
+        <strong>Demo Credentials:</strong><br/>
+        Username: <code>leblanc</code><br/>
+        Password: <code>the pale woman</code>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('login-form').onsubmit = async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errMsg = document.getElementById('error-msg');
+      
+      console.log('Login attempt:', { username, password });
+      
+      if (!username || !password){
+        errMsg.textContent = 'Username and password required';
+        errMsg.style.display = 'block';
+        return;
+      }
+      
+      try{
+        const r = await fetch('/login', {
+          method: 'POST',
+          headers: {'content-type': 'application/json'},
+          body: JSON.stringify({username, password})
+        });
+        console.log('Login response:', r.status, r.statusText);
+        const j = await r.json();
+        if (r.ok){
+          window.location.href = '/';
+        }else{
+          errMsg.textContent = j.detail || 'Invalid credentials';
+          errMsg.style.display = 'block';
+        }
+      }catch(err){
+        console.error('Login error:', err);
+        errMsg.textContent = 'Error: ' + err.message;
+        errMsg.style.display = 'block';
+      }
+    };
+  </script>
+</body>
+</html>
